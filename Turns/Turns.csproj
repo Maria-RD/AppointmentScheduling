@@ -6,4 +6,10 @@
   <ItemGroup>
 	<PackageReference Include ="Microsoft.EntityFrameworkCore" Version="3.1.1"></PackageReference>
   </ItemGroup>
+  <ItemGroup>
+	<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.1"></PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+	<PackageReference Include="Microsoft.EntityFramework.Design" Version="3.1.0"></PackageReference>
+  </ItemGroup>
 </Project>
