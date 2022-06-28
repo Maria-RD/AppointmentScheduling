@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Turns", "Turns.csproj", "{E6C80973-47DB-4D89-BC78-75BA95FC79DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TurnsBackFront", "TurnsBackFront.csproj", "{E6C80973-47DB-4D89-BC78-75BA95FC79DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

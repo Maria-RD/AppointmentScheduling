@@ -4965,9 +4965,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\DevProjects\\HospitalProject\\Turns\\Turns.csproj",
-      "projectName": "Turns",
-      "projectPath": "C:\\DevProjects\\HospitalProject\\Turns\\Turns.csproj",
+      "projectUniqueName": "C:\\DevProjects\\HospitalProject\\Turns\\TurnsBackFront.csproj",
+      "projectName": "TurnsBackFront",
+      "projectPath": "C:\\DevProjects\\HospitalProject\\Turns\\TurnsBackFront.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
       "outputPath": "C:\\DevProjects\\HospitalProject\\Turns\\obj\\",
       "projectStyle": "PackageReference",
