@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Turns.Controllers
 {
     public class SpecialityController : Controller
-
+    {
         public SpecialityController()
         {
 
@@ -13,4 +13,5 @@ namespace Turns.Controllers
         {
             return View();
         }
+    }
 }
