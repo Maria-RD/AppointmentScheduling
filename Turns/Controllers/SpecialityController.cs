@@ -17,5 +17,40 @@ namespace Turns.Controllers
         {
             return View(_context.Speciality.ToList());
         }
+
+        public IActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var speciality = _context.Speciality.Find(id);
+
+            if (speciality == null)
+            {
+                return NotFound();
+            }
+
+            return View(speciality);
+        }
+
+        [HttpPost] // Overloaded: HttpPost method to save to the DB, the other is for the View
+        public IActionResult Edit(int id, [Bind("SpecialityId, Description")] Speciality speciality)
+        {
+            if (id != speciality.SpecialityId)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                _context.Update(speciality);
+                _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View();
+        }
     }
 }
