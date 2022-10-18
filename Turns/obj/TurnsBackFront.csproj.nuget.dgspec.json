@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\DevProjects\\HospitalProject\\Turns\\TurnsBackFront.csproj": {}
+    "C:\\MyDevProjects\\AppointmentScheduling\\Turns\\TurnsBackFront.csproj": {}
   },
   "projects": {
-    "C:\\DevProjects\\HospitalProject\\Turns\\TurnsBackFront.csproj": {
+    "C:\\MyDevProjects\\AppointmentScheduling\\Turns\\TurnsBackFront.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\DevProjects\\HospitalProject\\Turns\\TurnsBackFront.csproj",
+        "projectUniqueName": "C:\\MyDevProjects\\AppointmentScheduling\\Turns\\TurnsBackFront.csproj",
         "projectName": "TurnsBackFront",
-        "projectPath": "C:\\DevProjects\\HospitalProject\\Turns\\TurnsBackFront.csproj",
+        "projectPath": "C:\\MyDevProjects\\AppointmentScheduling\\Turns\\TurnsBackFront.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\DevProjects\\HospitalProject\\Turns\\obj\\",
+        "outputPath": "C:\\MyDevProjects\\AppointmentScheduling\\Turns\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,7 +59,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -71,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
