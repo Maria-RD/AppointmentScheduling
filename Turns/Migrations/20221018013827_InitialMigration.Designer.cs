@@ -9,7 +9,7 @@ using Turns.Models;
 namespace TurnsBackFront.Migrations
 {
     [DbContext(typeof(TurnsContext))]
-    [Migration("20220628053232_InitialMigration")]
+    [Migration("20221018013827_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
