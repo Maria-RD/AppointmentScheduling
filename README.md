@@ -55,7 +55,7 @@ Authentication: Windows Authentication
 7. Navigate to the DB "Turns". Populate the tables with the scripts stored at the folder "DataPopulation/Tables".
 8. Run the project. 
 ~~~
-dotnet run
+dotnet watch run
 ~~~
 
 ## Usage 📜
