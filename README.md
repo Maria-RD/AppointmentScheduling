@@ -31,6 +31,9 @@ Coming soon!
 git clone https://github.com/Maria-RD/AppointmentScheduling.git
 ~~~
 2. Open the project in Visual Studio or Visual Studio Code.
+~~~
+cd AppointmentScheduling  
+~~~
 3. Install the EF Core command-line tools.
 ~~~
 dotnet tool install --global dotnet-ef --version 3.1
