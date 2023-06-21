@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using Turns.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using System.Threading.Tasks;
+using Turns.Models;
 
 namespace Turns.Controllers
 {
@@ -13,19 +15,19 @@ namespace Turns.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View(_context.Speciality.ToList());
+            return View(await _context.Speciality.ToListAsync());
         }
 
-        public IActionResult Edit(int? id)
+        public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var speciality = _context.Speciality.Find(id);
+            var speciality = await _context.Speciality.FindAsync(id);
 
             if (speciality == null)
             {
@@ -36,7 +38,7 @@ namespace Turns.Controllers
         }
 
         [HttpPost] // Overloaded: HttpPost method to save to the DB, the other is for the View
-        public IActionResult Edit(int id, [Bind("SpecialityId, Description")] Speciality speciality)
+        public async Task<IActionResult> Edit(int id, [Bind("SpecialityId, Description")] Speciality speciality)
         {
             if (id != speciality.SpecialityId)
             {
@@ -46,21 +48,21 @@ namespace Turns.Controllers
             if (ModelState.IsValid)
             {
                 _context.Update(speciality);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
 
             return View(speciality);
         }
 
-        public IActionResult Delete(int? id)
+        public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var speciality = _context.Speciality.FirstOrDefault(e => e.SpecialityId == id);
+            var speciality = await _context.Speciality.FirstOrDefaultAsync(e => e.SpecialityId == id);
 
             if (speciality == null)
             {
@@ -71,11 +73,11 @@ namespace Turns.Controllers
         }
 
         [HttpPost]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var speciality = _context.Speciality.Find(id);
+            var speciality = await _context.Speciality.FindAsync(id);
             _context.Speciality.Remove(speciality);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
         }
