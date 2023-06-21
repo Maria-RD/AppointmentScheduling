@@ -1,0 +1,21 @@
+﻿@model Turns.Models.Speciality
+
+<h4>Speciality</h4>
+
+<div>
+    <form asp-action="Edit">
+        <div asp-validation-summary="ModelOnly"></div>
+        <input type="hidden" asp-for="SpecialityId"/>
+        <div>
+            <label asp-for="Description"></label>
+            <input asp-for="Description"/>
+            <span asp-validation-for="Description"></span>
+        </div>
+        <div>
+            <input type="submit" value="Save"/>
+        </div>
+    </form>
+</div>
+<div>
+    <a asp-action="Index">Return</a>
+</div>
