@@ -1,0 +1,22 @@
+﻿@model Turns.Models.Speciality
+
+<h3>
+    Are you sure you want to delete the following item?
+</h3>
+<div>
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd>
+            @Html.DisplayTextFor(model => model.Description)
+        </dd>
+    </dl>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="SpecialityId"/>
+        <input type="submit" value="Delete"/>
+    </form>
+    <div>
+        <a asp-action="Index">Return</a>
+    </div>
+</div>

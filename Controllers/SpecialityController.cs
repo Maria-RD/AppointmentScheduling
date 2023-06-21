@@ -50,7 +50,34 @@ namespace Turns.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            return View();
+            return View(speciality);
+        }
+
+        public IActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var speciality = _context.Speciality.FirstOrDefault(e => e.SpecialityId == id);
+
+            if (speciality == null)
+            {
+                return NotFound();
+            }
+
+            return View(speciality);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            var speciality = _context.Speciality.Find(id);
+            _context.Speciality.Remove(speciality);
+            _context.SaveChanges();
+
+            return RedirectToAction(nameof(Index));
         }
     }
 }

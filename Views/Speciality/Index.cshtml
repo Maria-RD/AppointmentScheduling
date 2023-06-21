@@ -16,6 +16,10 @@
 			<td>
 				@Html.DisplayFor(model => item.Description)
 			</td>
+			<td>
+				<a asp-action="Edit" asp-route-id="@item.SpecialityId">Edit</a>
+				<a asp-action="Delete" asp-route-id="@item.SpecialityId">Delete</a>
+			</td>
 		</tr>
 		}
 	</tbody>
