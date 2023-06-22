@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace Turns.Models
+namespace TurnsBackFront.Models
 {
     public class TurnsContext : DbContext
     {

@@ -1,10 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
 using System.Threading.Tasks;
-using Turns.Models;
+using TurnsBackFront.Models;
 
-namespace Turns.Controllers
+namespace TurnsBackFront.Controllers
 {
     public class SpecialityController : Controller
     {

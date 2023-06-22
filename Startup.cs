@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Turns.Models;
+using TurnsBackFront.Models;
 
 namespace Turns
 {

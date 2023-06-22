@@ -1,6 +1,6 @@
 using System;
 
-namespace Turns.Models
+namespace TurnsBackFront.Models
 {
     public class ErrorViewModel
     {
