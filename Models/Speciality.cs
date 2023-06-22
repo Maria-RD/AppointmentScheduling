@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Turns.Models
+namespace TurnsBackFront.Models
 {
     public class Speciality
     {
