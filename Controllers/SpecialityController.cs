@@ -81,5 +81,22 @@ namespace Turns.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create([Bind("SpecialityId, Description")] Speciality speciality)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(speciality);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View();
+        }
     }
 }
