@@ -36,7 +36,7 @@ cd AppointmentScheduling
 ~~~
 3. Install the EF Core command-line tools.
 ~~~
-dotnet tool install --global dotnet-ef --version 3.1
+dotnet tool install --global dotnet-ef --version 3.1.1
 ~~~
 4. Create a new EF Migrations file.
 ~~~
@@ -52,7 +52,7 @@ Server type: Database Engine
 Server name: .\
 Authentication: Windows Authentication
 ~~~
-7. Navigate to the DB "Turns". Populate the tables with the scripts stored at the folder "DataPopulation/Tables".
+7. Navigate to the DB "Turns". Populate the tables with the scripts stored at the folder "[DataPopulation/Tables](https://github.com/Maria-RD/AppointmentScheduling/tree/master/DataPopulation/Tables)".
 8. Run the project. 
 ~~~
 dotnet watch run
