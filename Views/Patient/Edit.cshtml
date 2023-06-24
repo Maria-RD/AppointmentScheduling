@@ -1,0 +1,41 @@
+﻿@model TurnsBackFront.Models.Patient
+
+<h4>Patient</h4>
+
+<div>
+    <form asp-action="Edit">
+        <div asp-validation-summary="ModelOnly"></div>
+        <input type="hidden" asp-for="PatientId">
+        <div>
+            <label asp-for="Name"></label>
+            <input asp-for="Name"/>
+            <span asp-validation-for="Name"></span>
+        </div>
+        <div>
+            <label asp-for="Surname"></label>
+            <input asp-for="Surname"/>
+            <span asp-validation-for="Surname"></span>
+        </div>
+        <div>
+            <label asp-for="Address"></label>
+            <input asp-for="Address"/>
+            <span asp-validation-for="Address"></span>
+        </div>
+        <div>
+            <label asp-for="Phone"></label>
+            <input asp-for="Phone"/>
+            <span asp-validation-for="Phone"></span>
+        </div>
+        <div>
+            <label asp-for="Email"></label>
+            <input asp-for="Email"/>
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div>
+            <input type="submit" value="Save"/>
+        </div>
+    </form>
+</div>
+<div>
+    <a asp-action="Index">Return</a>
+</div>

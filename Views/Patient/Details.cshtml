@@ -1,0 +1,41 @@
+﻿@model TurnsBackFront.Models.Patient
+
+<h4>Patient</h4>
+<div>
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Surname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Surname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PatientId">Edit</a> |
+    <a asp-action="Index">Return</a>
+</div>
