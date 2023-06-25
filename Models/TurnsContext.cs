@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using TurnsBackFront.Models;
 
 namespace TurnsBackFront.Models
 {
@@ -13,6 +14,8 @@ namespace TurnsBackFront.Models
         public DbSet<Speciality> Speciality { get; set; }
         
         public DbSet<Patient> Patient { get; set; }
+
+        public DbSet<Physician> Physician { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -57,6 +60,46 @@ namespace TurnsBackFront.Models
                 entity.Property(e => e.Email)
                 .IsRequired()
                 .HasMaxLength(100)
+                .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Physician>(entity =>
+            {
+                entity.ToTable("Physician");
+
+                entity.HasKey("PhysicianId");
+
+                entity.Property(e => e.Name)
+                .IsRequired()
+                .HasMaxLength(50)
+                .IsUnicode(false);
+
+                entity.Property(e => e.Surname)
+                .IsRequired()
+                .HasMaxLength(50)
+                .IsUnicode(false);
+
+                entity.Property(e => e.Address)
+                .IsRequired()
+                .HasMaxLength(250)
+                .IsUnicode(false);
+
+                entity.Property(e => e.Phone)
+                .IsRequired()
+                .HasMaxLength(20)
+                .IsUnicode(false);
+
+                entity.Property(e => e.Email)
+                .IsRequired()
+                .HasMaxLength(100)
+                .IsUnicode(false);
+
+                entity.Property(e => e.OpeningHoursFrom)
+                .IsRequired()
+                .IsUnicode(false);
+
+                entity.Property(e => e.OpeningHoursTo)
+                .IsRequired()
                 .IsUnicode(false);
             });
         }
