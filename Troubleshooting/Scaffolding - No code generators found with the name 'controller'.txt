@@ -1,0 +1,10 @@
+1. Install NuGet package CodeGenerator:
+	<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="<SDK_version>" />
+	E.G.: <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+2. Install CodeGenerator. In 3.1.4 version, problem is solved.
+	dotnet tool install --global dotnet-aspnet-codegenerator --version <SDK_version>
+	E.G.: dotnet tool install --global dotnet-aspnet-codegenerator --version 3.1.4
+3. In PowerShell, run the Scaffolding generator
+	dotnet aspnet-codegenerator controller -name PhysicianController -actions -m Physician -dc TurnsContext -outDir Controllers
+
+SOURCE: https://github.com/dotnet/Scaffolding/issues/1347
