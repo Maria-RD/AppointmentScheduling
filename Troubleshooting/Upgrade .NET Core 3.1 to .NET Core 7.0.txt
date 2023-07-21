@@ -1,0 +1,36 @@
+--------------------------------------------------------------------
+DOWNLOAD LIBRARIES
+1. Install Visual Studio Community 2022 IDE
+https://visualstudio.microsoft.com/vs/
+2. Install the .NET SDK 7.0: OS > Windows > Installers: x64
+https://dotnet.microsoft.com/en-us/download/dotnet/7.0
+3. Install the ASP.NET Runtime 7.0: OS > Windows > Installers: x64
+(same link as the 2nd step)
+--------------------------------------------------------------------
+UPDATE FROM .NET CORE 3.1 TO .NET CORE 7.0
+1. Go to the Solution Explorer > right-click the project (not the solution) > Properties > Application > General > Target framework > .NET 7.0
+Alternative:
+1. Go to the current solution (in this case TurnsBackFront) in the Solution Explorer. 
+2. Double click on it, and edit the .csproj file as follows:
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+3. Clean and rebuild the solution. Right-click the solution > Clean solution > Right-click the solution > Rebuild solution
+4. Go to Solution Explorer > rigth-click the solution > Manage NuGet packages for solution... > Tab "Updates"
+5. Update each package to .NET 7.0 as follows:
+Select a package > Version > Lastest stable 7.0 > Install > Preview Changes: Ok > License Acceptance: I Accept
+Make this for every package.
+6. Clean and rebuild the solution. Right-click the solution > Clean solution > Right-click the solution > Rebuild solution
+7. Run the command "dotnet watch run" in Powershell.
+
+Source: https://www.c-sharpcorner.com/blogs/migration-from-net-core-31-to-net-6
+--------------------------------------------------------------------
+TROUBLESHOOTING
+1. 'Index' was not found.
+An unhandled exception occurred while processing the request.
+InvalidOperationException: The view 'Index' was not found. The following locations were searched:
+/Views/Home/Index.cshtml
+/Views/Shared/Index.cshtml
+
+This happened to me because I was using Visual Studio 17.5.1. Upgrade it to the lastest version and the problem is solved
+Source: https://stackoverflow.com/a/71369674
