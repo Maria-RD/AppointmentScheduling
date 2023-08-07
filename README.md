@@ -4,14 +4,14 @@
 [![GitHub stars](https://img.shields.io/github/stars/maria-rd/AppointmentScheduling.svg?style=social)](https://github.com/maria-rd/AppointmentScheduling/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/maria-rd/AppointmentScheduling?style=social)](https://github.com/maria-rd/AppointmentScheduling/network)
 
-This is a ASP.NET Core 3.1 C# MVC webapp. ✈️
+This is a ASP.NET Core 7.0 C# MVC webapp, formerly in 3.1. ✈️
 
 ## Features 🎉
 
 Coming soon!
 
 ## Technologies 💻
-* .NET Core 3.1 MVC
+* .NET Core 7.0 MVC
 * Entity Framework
 * MaterializeCSS
 * HTML5
@@ -19,7 +19,7 @@ Coming soon!
 
 ## Requirements 🛠
 
-* .NET Core 3.1 SDK ([install!](https://dotnet.microsoft.com/en-us/download/dotnet/3.1))
+* .NET Core 7.0 SDK ([install!](https://dotnet.microsoft.com/en-us/download/dotnet/7.0))
 * Visual Studio 2022 (Community Edition) ([install!](https://visualstudio.microsoft.com/vs/)) or Visual Studio Code ([install!](https://code.visualstudio.com/download))
 * SQL Server 2019 (Developer Edition) ([install!](https://go.microsoft.com/fwlink/?linkid=866662))
 * SQL Server Management Studio (SSMS) 19 ([install!](https://aka.ms/ssmsfullsetup)) 
@@ -36,7 +36,7 @@ cd AppointmentScheduling
 ~~~
 3. Install the EF Core command-line tools.
 ~~~
-dotnet tool install --global dotnet-ef --version 3.1.1
+dotnet tool install --global dotnet-ef --version 7.0.0
 ~~~
 4. Create a new EF Migrations file.
 ~~~
@@ -52,7 +52,7 @@ Server type: Database Engine
 Server name: .\
 Authentication: Windows Authentication
 ~~~
-7. Navigate to the DB "Turns". Populate the tables with the scripts stored at the folder "[DataPopulation/Tables](https://github.com/Maria-RD/AppointmentScheduling/tree/master/DataPopulation/Tables)".
+7. Navigate to the DB "TurnsDB". Populate the tables with the scripts stored at the folder "[DataPopulation/Tables](https://github.com/Maria-RD/AppointmentScheduling/tree/master/DataPopulation/Tables)".
 8. Run the project. 
 ~~~
 dotnet watch run
