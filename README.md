@@ -36,7 +36,7 @@ cd AppointmentScheduling
 ~~~
 3. Install the EF Core command-line tools.
 ~~~
-dotnet tool install --global dotnet-ef --version 7.0.0
+dotnet tool install --global dotnet-ef --version 7.0.9
 ~~~
 4. Create a new EF Migrations file.
 ~~~
