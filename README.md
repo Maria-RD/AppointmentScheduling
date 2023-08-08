@@ -52,7 +52,7 @@ Server type: Database Engine
 Server name: .\
 Authentication: Windows Authentication
 ~~~
-7. Navigate to the DB "TurnsDB". Populate the tables with the scripts stored at the folder "[DataPopulation/Tables](https://github.com/Maria-RD/AppointmentScheduling/tree/master/DataPopulation/Tables)".
+7. Connect to the TurnsDB database. Use the [DataPopulation.sql](https://github.com/Maria-RD/AppointmentScheduling/blob/master/DataPopulation/DataPopulation.sql) script to populate the tables.
 8. Run the project. 
 ~~~
 dotnet watch run
