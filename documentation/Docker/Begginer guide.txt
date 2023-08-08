@@ -1,0 +1,2 @@
+- .NET Guide: https://docs.docker.com/language/dotnet/
+- Useful commands: https://www.digitalocean.com/community/tutorials/working-with-docker-containers
