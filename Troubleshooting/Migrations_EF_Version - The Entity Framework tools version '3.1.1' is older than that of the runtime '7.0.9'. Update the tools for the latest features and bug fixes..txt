@@ -1,0 +1,6 @@
+The Entity Framework tools version '3.1.1' is older than that of the runtime '7.0.9'. Update the tools for the latest features and bug fixes. See httpsaka.msAAc1fbw for more information.
+
+1. For .NET 6, it would be
+dotnet tool update --global dotnet-ef --version 6.0.0
+
+SOURCE: https://stackoverflow.com/a/70046188

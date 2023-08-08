@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace TurnsBackFront.Models
@@ -14,5 +15,6 @@ namespace TurnsBackFront.Models
         public string Email { get; set; }
         public DateTime OpeningHoursFrom { get; set; }
         public DateTime OpeningHoursTo { get; set; }
+        public List<PhysicianSpeciality> PhysicianSpeciality { get; set; }
     }
 }
