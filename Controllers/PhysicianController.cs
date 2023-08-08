@@ -45,6 +45,7 @@ namespace TurnsBackFront.Controllers
         // GET: Physician/Create
         public IActionResult Create()
         {
+            ViewData["ListSpecialities"] = new SelectList(_context.Speciality, "SpecialityId", "Description");
             return View();
         }
 
