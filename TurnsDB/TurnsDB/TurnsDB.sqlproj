@@ -6,7 +6,7 @@
     <Name>TurnsDB</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
-    <ProjectGuid>{0655a738-8a17-4196-aa17-888c475f2d45}</ProjectGuid>
+    <ProjectGuid>{b2c30f0c-7c64-4b4f-be1b-1ba77d0053de}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>

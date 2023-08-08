@@ -32,7 +32,7 @@ git clone https://github.com/Maria-RD/AppointmentScheduling.git
 ~~~
 2. Open the project in Visual Studio or Visual Studio Code.
 ~~~
-cd AppointmentScheduling  
+cd AppointmentScheduling/src
 ~~~
 3. Install the EF Core command-line tools.
 ~~~
@@ -52,7 +52,7 @@ Server type: Database Engine
 Server name: .\
 Authentication: Windows Authentication
 ~~~
-7. Connect to the TurnsDB database. Use the [DataPopulation.sql](https://github.com/Maria-RD/AppointmentScheduling/blob/master/DataPopulation/DataPopulation.sql) script to populate the tables.
+7. Connect to the TurnsDB database. Use the [DataPopulation.sql](https://github.com/Maria-RD/AppointmentScheduling/blob/master/documentation/DataPopulation/DataPopulation.sql) script to populate the tables.
 8. Run the project. 
 ~~~
 dotnet watch run

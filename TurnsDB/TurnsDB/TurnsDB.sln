@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TurnsDB", "TurnsDB.sqlproj", "{B2C30F0C-7C64-4B4F-BE1B-1BA77D0053DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2C30F0C-7C64-4B4F-BE1B-1BA77D0053DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2C30F0C-7C64-4B4F-BE1B-1BA77D0053DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2C30F0C-7C64-4B4F-BE1B-1BA77D0053DE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B2C30F0C-7C64-4B4F-BE1B-1BA77D0053DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2C30F0C-7C64-4B4F-BE1B-1BA77D0053DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2C30F0C-7C64-4B4F-BE1B-1BA77D0053DE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {245CECD6-5D98-4E26-AA5B-719403F35938}
+	EndGlobalSection
+EndGlobal

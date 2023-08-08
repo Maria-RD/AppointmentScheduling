@@ -1,0 +1,19 @@
+docker build --tag appointmentscheduling .
+
+docker images
+
+docker rmi <name_of_image>
+
+docker run --publish 5000:80 appointmentscheduling
+
+Ctrl + C
+
+docker ps
+
+docker ps --all
+
+docker start -ai <name_of_container>
+
+docker stop <name_of_container>
+
+docker rm <name_of_container>
