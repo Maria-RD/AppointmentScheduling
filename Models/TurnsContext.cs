@@ -12,10 +12,11 @@ namespace TurnsBackFront.Models
         }
 
         public DbSet<Speciality> Speciality { get; set; }
-        
+
         public DbSet<Patient> Patient { get; set; }
 
         public DbSet<Physician> Physician { get; set; }
+        public DbSet<PhysicianSpeciality> PhysicianSpeciality {get; set;}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -102,6 +103,16 @@ namespace TurnsBackFront.Models
                 .IsRequired()
                 .IsUnicode(false);
             });
+
+            modelBuilder.Entity<PhysicianSpeciality>().HasKey(x => new { x.PhysicianId, x.SpecialityId});
+
+            modelBuilder.Entity<PhysicianSpeciality>().HasOne(x => x.Physician)
+                .WithMany(p => p.PhysicianSpeciality)
+                .HasForeignKey(p => p.PhysicianId);
+
+            modelBuilder.Entity<PhysicianSpeciality>().HasOne(x => x.Speciality)
+                .WithMany(p => p.PhysicianSpeciality)
+                .HasForeignKey(p => p.SpecialityId);
         }
     }
 }
