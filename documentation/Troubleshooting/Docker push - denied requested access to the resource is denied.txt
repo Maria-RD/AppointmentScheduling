@@ -1,0 +1,10 @@
+docker logout
+docker login
+docker tag image_name YOUR_DOCKERHUB_NAME/image_name
+docker push YOUR_DOCKERHUB_NAME/image_name
+
+Example: 
+docker tag appointmentscheduling mariard/appointmentschedulingtest
+docker push mariard/appointmentschedulingtest
+
+SOURCE: https://www.biostars.org/p/9531985/#:~:text=Why%20this%20error%20occurs%3F,docker%20hub%20credentials%20are%20incorrect.
