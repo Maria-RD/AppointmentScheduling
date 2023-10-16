@@ -1,2 +1,6 @@
 - .NET Guide: https://docs.docker.com/language/dotnet/
 - Useful commands: https://www.digitalocean.com/community/tutorials/working-with-docker-containers
+- Containerize ASP.NET Core application and SQL Server with Docker: https://www.twilio.com/blog/containerize-your-aspdotnet-core-application-and-sql-server-with-docker
+- Built-In Container Support for .NET 7 – Dockerize .NET Applications without Dockerfile!: https://codewithmukesh.com/blog/built-in-container-support-for-dotnet-7/
+- How to deploy ASP NET Web Application on Docker Container: https://www.youtube.com/watch?v=qLi2qToXBcQ
+- How to deploy ASP NET web application in AWS ECS Elastic Container Service through FargateServerless: https://www.youtube.com/watch?v=RLTywWKNwag

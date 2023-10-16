@@ -1,0 +1,9 @@
+For .NET Corre:
+
+1. Edit the file in Properties > launchSetting.json
+2. Change "ASPNETCORE_ENVIRONMENT": "Development" to "ASPNETCORE_ENVIRONMENT": "Production". DONE.
+3. Keep in mind, connection strings:
+Production: appsettings.json
+Development: appsettings.Development.json 
+
+SOURCE: https://stackoverflow.com/a/59551420
