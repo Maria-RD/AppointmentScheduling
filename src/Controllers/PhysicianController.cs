@@ -54,12 +54,15 @@ namespace TurnsBackFront.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PhysicianId,Name,Surname,Address,Phone,Email,OpeningHoursFrom,OpeningHoursTo")] Physician physician)
+        public async Task<IActionResult> Create([Bind("PhysicianId,Name,Surname,Address,Phone,Email,OpeningHoursFrom,OpeningHoursTo")] Physician physician, int SpecialityId)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(physician);
                 await _context.SaveChangesAsync();
+                PhysicianSpeciality physicianSpeciality = new PhysicianSpeciality();
+                physicianSpeciality.PhysicianId = physician.PhysicianId;
+                physicianSpeciality.SpecialityId = SpecialityId;
                 return RedirectToAction(nameof(Index));
             }
             return View(physician);
