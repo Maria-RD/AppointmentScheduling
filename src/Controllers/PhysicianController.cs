@@ -60,9 +60,14 @@ namespace TurnsBackFront.Controllers
             {
                 _context.Add(physician);
                 await _context.SaveChangesAsync();
+
                 PhysicianSpeciality physicianSpeciality = new PhysicianSpeciality();
                 physicianSpeciality.PhysicianId = physician.PhysicianId;
                 physicianSpeciality.SpecialityId = SpecialityId;
+
+                _context.Add(physicianSpeciality);
+                await _context.SaveChangesAsync();
+
                 return RedirectToAction(nameof(Index));
             }
             return View(physician);
