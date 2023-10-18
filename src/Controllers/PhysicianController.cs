@@ -81,11 +81,22 @@ namespace TurnsBackFront.Controllers
                 return NotFound();
             }
 
-            var physician = await _context.Physician.FindAsync(id);
+            Physician physician = await _context.Physician.Where(p => p.PhysicianId == id) // FindAsync(id);
+                .Include(ph => ph.PhysicianSpeciality).FirstOrDefaultAsync();
+
             if (physician == null)
             {
                 return NotFound();
             }
+
+            if (!physician.PhysicianSpeciality.Any())
+            {
+                return NotFound();
+            }
+
+            ViewData["ListSpecialities"] = new SelectList(
+                _context.Speciality, "SpecialityId", "Description", physician.PhysicianSpeciality[0].SpecialityId);
+
             return View(physician);
         }
 
@@ -94,7 +105,7 @@ namespace TurnsBackFront.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PhysicianId,Name,Surname,Address,Phone,Email,OpeningHoursFrom,OpeningHoursTo")] Physician physician)
+        public async Task<IActionResult> Edit(int id, [Bind("PhysicianId,Name,Surname,Address,Phone,Email,OpeningHoursFrom,OpeningHoursTo")] Physician physician, int SpecialityId)
         {
             if (id != physician.PhysicianId)
             {
@@ -106,6 +117,17 @@ namespace TurnsBackFront.Controllers
                 try
                 {
                     _context.Update(physician);
+                    await _context.SaveChangesAsync();
+
+                    PhysicianSpeciality specialityPhysician = await _context.PhysicianSpeciality
+                        .FirstOrDefaultAsync(ph => ph.PhysicianId == id);
+
+                    _context.Remove(specialityPhysician);
+                    await _context.SaveChangesAsync();
+
+                    specialityPhysician.SpecialityId = SpecialityId;
+                    _context.Add(specialityPhysician);
+
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
