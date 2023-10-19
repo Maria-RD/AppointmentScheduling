@@ -154,8 +154,9 @@ namespace TurnsBackFront.Controllers
                 return NotFound();
             }
 
-            var physician = await _context.Physician
+            Physician physician = await _context.Physician
                 .FirstOrDefaultAsync(m => m.PhysicianId == id);
+
             if (physician == null)
             {
                 return NotFound();
@@ -169,8 +170,15 @@ namespace TurnsBackFront.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var physician = await _context.Physician.FindAsync(id);
+            PhysicianSpeciality physicianSpeciality = await _context.PhysicianSpeciality
+                .FirstOrDefaultAsync(ph => ph.PhysicianId == id);
+
+            _context.PhysicianSpeciality.Remove(physicianSpeciality);
+            await _context.SaveChangesAsync();
+
+            Physician physician = await _context.Physician.FindAsync(id);
             _context.Physician.Remove(physician);
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
