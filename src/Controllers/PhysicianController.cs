@@ -32,8 +32,10 @@ namespace TurnsBackFront.Controllers
                 return NotFound();
             }
 
-            var physician = await _context.Physician
-                .FirstOrDefaultAsync(m => m.PhysicianId == id);
+            Physician physician = await _context.Physician
+                .Where(p => p.PhysicianId == id).Include(ps => ps.PhysicianSpeciality)
+                .ThenInclude(s => s.Speciality).FirstOrDefaultAsync();
+
             if (physician == null)
             {
                 return NotFound();
@@ -82,7 +84,7 @@ namespace TurnsBackFront.Controllers
             }
 
             Physician physician = await _context.Physician.Where(p => p.PhysicianId == id) // FindAsync(id);
-                .Include(ph => ph.PhysicianSpeciality).FirstOrDefaultAsync();
+                .Include(ps => ps.PhysicianSpeciality).FirstOrDefaultAsync();
 
             if (physician == null)
             {
@@ -120,7 +122,7 @@ namespace TurnsBackFront.Controllers
                     await _context.SaveChangesAsync();
 
                     PhysicianSpeciality specialityPhysician = await _context.PhysicianSpeciality
-                        .FirstOrDefaultAsync(ph => ph.PhysicianId == id);
+                        .FirstOrDefaultAsync(ps => ps.PhysicianId == id);
 
                     _context.Remove(specialityPhysician);
                     await _context.SaveChangesAsync();
@@ -155,7 +157,7 @@ namespace TurnsBackFront.Controllers
             }
 
             Physician physician = await _context.Physician
-                .FirstOrDefaultAsync(m => m.PhysicianId == id);
+                .FirstOrDefaultAsync(p => p.PhysicianId == id);
 
             if (physician == null)
             {
@@ -185,7 +187,7 @@ namespace TurnsBackFront.Controllers
 
         private bool PhysicianExists(int id)
         {
-            return _context.Physician.Any(e => e.PhysicianId == id);
+            return _context.Physician.Any(p => p.PhysicianId == id);
         }
     }
 }
