@@ -12,34 +12,25 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Turns</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class=""nav-item"">
-                            <a class ="nav-link text-dark" asp-area="" asp-controller="Speciality" asp-action="Index">Speciality</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Patient" asp-action="Index">Patient</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Physician" asp-action="Index">Physician</a>
-                        </li>
-                    </ul>
-                </div>
+        <nav>
+            <div class="nav-wrapper indigo darken-4">
+                <a href="#!" class="brand-logo center"><img src="https://i.imgur.com/RIIgQnP.png" class="responsive-img" alt="Appointments" /></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-controller="Speciality" asp-action="Index">Speciality</a></li>
+                    <li><a asp-controller="Patient" asp-action="Index">Patient</a></li>
+                    <li><a asp-controller="Physician" asp-action="Index">Physician</a></li>
+                </ul>
             </div>
         </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li><a asp-controller="Speciality" asp-action="Index">Speciality</a></li>
+            <li><a asp-controller="Patient" asp-action="Index">Patient</a></li>
+            <li><a asp-controller="Physician" asp-action="Index">Physician</a></li>
+        </ul>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -57,5 +48,10 @@
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="~/js/materialize.min.js"></script>
     @RenderSection("Scripts", required: false)
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+    </script>
 </body>
 </html>
