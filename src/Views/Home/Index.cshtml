@@ -2,7 +2,77 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="row">
+    <div class="col s12 m4">
+        <div class="card">
+            <div class="card-image center green accent-3">
+                <img src="https://i.imgur.com/H0y2j7W.jpg">
+                <a class="btn-floating halfway-fab waves-effect waves-light green accent-3" asp-controller="Speciality" asp-action="Index"><i class="material-icons">add</i></a>
+            </div>
+            <div class="card-content">
+                <span class="card-title">Specialities:</span>
+                <p>
+                    In this section, you can add, modify, or delete new specialties, which can be assigned to a physician.
+                </p>
+            </div>
+            <div class="card-action indigo darken-3">
+                <a asp-controller="Speciality" asp-action="Index" class="green-text text-accent-3">See more</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12 m4">
+        <div class="card">
+            <div class="card-image center green accent-3">
+                <img src="https://i.imgur.com/BydaIWt.jpg">
+                <a class="btn-floating halfway-fab waves-effect waves-light green accent-3" asp-controller="Physician" asp-action="Index"><i class="material-icons">add</i></a>
+            </div>
+            <div class="card-content">
+                <span class="card-title">Physicians:</span>
+                <p>
+                    In this section, you can add new physicians, modify their data, and link them with their specialty.
+                </p>
+            </div>
+            <div class="card-action indigo darken-3">
+                <a asp-controller="Physician" asp-action="Index" class="green-text text-accent-3">See more</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12 m4">
+        <div class="card">
+            <div class="card-image center green accent-3">
+                <img src="https://i.imgur.com/CYV9i5h.jpg">
+                <a class="btn-floating halfway-fab waves-effect waves-light green accent-3" asp-controller="Patient" asp-action="Index"><i class="material-icons">add</i></a>
+            </div>
+            <div class="card-content">
+                <span class="card-title">Patients:</span>
+                <p>
+                    In this section, you can add new patients, modify their data, or delete them from the database.
+                </p>
+            </div>
+            <div class="card-action indigo darken-3">
+                <a asp-controller="Patient" asp-action="Index" class="green-text text-accent-3">See more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s12 m4 offset-m4">
+        <div class="card">
+            <div class="card-image center green accent-3">
+                <img src="https://i.imgur.com/uSzPk44.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title">Appointments:</span>
+                <p>
+                    In this section, you can add new medical appointments for a patient, assigning them to a particular physician.
+                </p>
+            </div>
+            <div class="card-action indigo darken-3">
+                <a asp-controller="" asp-action="Index" class="green-text text-accent-3">See more</a>
+            </div>
+        </div>
+    </div>
 </div>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Turns</title>
+    <title>@ViewData["Title"] - Appointments</title>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="~/css/site.css" />
@@ -19,8 +19,9 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a asp-controller="Home" asp-action="Index">Home</a></li>
                     <li><a asp-controller="Speciality" asp-action="Index">Speciality</a></li>
-                    <li><a asp-controller="Patient" asp-action="Index">Patient</a></li>
                     <li><a asp-controller="Physician" asp-action="Index">Physician</a></li>
+                    <li><a asp-controller="Patient" asp-action="Index">Patient</a></li>
+                    <li><a asp-controller="" asp-action="Index">Appointment</a></li>
                 </ul>
             </div>
         </nav>
@@ -28,8 +29,9 @@
         <ul class="sidenav" id="mobile-demo">
             <li><a asp-controller="Home" asp-action="Index">Home</a></li>
             <li><a asp-controller="Speciality" asp-action="Index">Speciality</a></li>
-            <li><a asp-controller="Patient" asp-action="Index">Patient</a></li>
             <li><a asp-controller="Physician" asp-action="Index">Physician</a></li>
+            <li><a asp-controller="Patient" asp-action="Index">Patient</a></li>
+            <li><a asp-controller="" asp-action="Index">Appointment</a></li>
         </ul>
     </header>
     <div class="container">
@@ -40,7 +42,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - Turns - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2023 - Appointments - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
