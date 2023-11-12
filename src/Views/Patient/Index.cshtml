@@ -1,54 +1,64 @@
 ﻿@model IEnumerable<TurnsBackFront.Models.Patient>
 
-<p>
-    <a asp-action="Create">Create</a>
-</p>
+<!DOCTYPE html>
 
-<table>
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Surname)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Address)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Phone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        <a asp-action="Create" class="btn-floating btn-large green accent-3"><i class="material-icons">person_add</i></a>
+    </p>
+    <table class="responsive-table highlight z-depth-1 striped green accent-1">
+        <thead class="green accent-3">
             <tr>
-                <td>
-                    @Html.DisplayFor(model => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(model => item.Surname)
-                </td>
-                <td>
-                    @Html.DisplayFor(model => item.Address)
-                </td>
-                <td>
-                    @Html.DisplayFor(model => item.Phone)
-                </td>
-                <td>
-                    @Html.DisplayFor(model => item.Email)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.PatientId">Edit</a>
-                    <a asp-action="Details" asp-route-id="@item.PatientId">Details</a>
-                    <a asp-action="Delete" asp-route-id="@item.PatientId">Delete</a>
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Surname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Address)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Phone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(model => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => item.Surname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => item.Address)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => item.Phone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => item.Email)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.PatientId"><i class="material-icons indigo-text darken-3">edit</i></a>
+                        <a asp-action="Details" asp-route-id="@item.PatientId"><i class="material-icons grey-text text-lighten-1">visibility</i></a>
+                        <a asp-action="Delete" asp-route-id="@item.PatientId"><i class="material-icons red-text">delete</i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
