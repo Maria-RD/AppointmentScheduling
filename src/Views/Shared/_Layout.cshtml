@@ -14,7 +14,7 @@
     <header>
         <nav>
             <div class="nav-wrapper indigo darken-4">
-                <a href="#!" class="brand-logo center"><img src="https://i.imgur.com/RIIgQnP.png" class="responsive-img" alt="Appointments" /></a>
+                <a asp-controller="Home" asp-action="Index" class="brand-logo center"><img src="https://i.imgur.com/RIIgQnP.png" class="responsive-img" alt="Appointments" /></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a asp-controller="Home" asp-action="Index">Home</a></li>
@@ -53,6 +53,8 @@
     <script>
         $(document).ready(function () {
             $('.sidenav').sidenav();
+            $('.timepicker').timepicker();
+            $('select').formSelect();
         });
     </script>
 </body>

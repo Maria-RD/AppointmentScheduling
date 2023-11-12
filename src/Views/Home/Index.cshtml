@@ -1,13 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+<br />
 <div class="row">
     <div class="col s12 m4">
         <div class="card">
             <div class="card-image center green accent-3">
                 <img src="https://i.imgur.com/H0y2j7W.jpg">
-                <a class="btn-floating halfway-fab waves-effect waves-light green accent-3" asp-controller="Speciality" asp-action="Index"><i class="material-icons">add</i></a>
+                <a class="btn-floating halfway-fab waves-effect waves-light green accent-3" asp-controller="Speciality" asp-action="Create"><i class="material-icons">add</i></a>
             </div>
             <div class="card-content">
                 <span class="card-title">Specialities:</span>
@@ -25,7 +25,7 @@
         <div class="card">
             <div class="card-image center green accent-3">
                 <img src="https://i.imgur.com/BydaIWt.jpg">
-                <a class="btn-floating halfway-fab waves-effect waves-light green accent-3" asp-controller="Physician" asp-action="Index"><i class="material-icons">add</i></a>
+                <a class="btn-floating halfway-fab waves-effect waves-light green accent-3" asp-controller="Physician" asp-action="Create"><i class="material-icons">add</i></a>
             </div>
             <div class="card-content">
                 <span class="card-title">Physicians:</span>
@@ -43,7 +43,7 @@
         <div class="card">
             <div class="card-image center green accent-3">
                 <img src="https://i.imgur.com/CYV9i5h.jpg">
-                <a class="btn-floating halfway-fab waves-effect waves-light green accent-3" asp-controller="Patient" asp-action="Index"><i class="material-icons">add</i></a>
+                <a class="btn-floating halfway-fab waves-effect waves-light green accent-3" asp-controller="Patient" asp-action="Create"><i class="material-icons">add</i></a>
             </div>
             <div class="card-content">
                 <span class="card-title">Patients:</span>

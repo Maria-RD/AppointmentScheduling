@@ -9,61 +9,74 @@
 </head>
 <body>
 
-<h4>Physician</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Surname" class="control-label"></label>
-                <input asp-for="Surname" class="form-control" />
-                <span asp-validation-for="Surname" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Address" class="control-label"></label>
-                <input asp-for="Address" class="form-control" />
-                <span asp-validation-for="Address" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Phone" class="control-label"></label>
-                <input asp-for="Phone" class="form-control" />
-                <span asp-validation-for="Phone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="OpeningHoursFrom" class="control-label"></label>
-                <input asp-for="OpeningHoursFrom" class="form-control" />
-                <span asp-validation-for="OpeningHoursFrom" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="OpeningHoursTo" class="control-label"></label>
-                <input asp-for="OpeningHoursTo" class="form-control" />
-                <span asp-validation-for="OpeningHoursTo" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label class="control-label"></label>
-                <select name="SpecialityId" class="form-control" asp-items="ViewBag.ListSpecialities"></select>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+    <h4>Physician</h4>
+    <hr />
+    <div class="row">
+        <div>
+            <form class="col-s12" asp-action="Create">
+                <div asp-validation-summary="ModelOnly"></div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input asp-for="Name" type="text" class="validate">
+                        <label asp-for="Name"></label>
+                        <span asp-validation-for="Name"></span>
+                    </div>
+                    <div class="input-field col s6">
+                        <input asp-for="Surname" type="text" class="validate">
+                        <label asp-for="Surname"></label>
+                        <span asp-validation-for="Surname"></span>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">home</i>
+                        <input asp-for="Address" type="text" class="validate">
+                        <label asp-for="Address"></label>
+                        <span asp-validation-for="Address"></span>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">phone</i>
+                        <input asp-for="Phone" type="tel" class="validate">
+                        <label asp-for="Phone"></label>
+                        <span asp-validation-for="Phone"></span>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">local_post_office</i>
+                        <input asp-for="Email" type="email" class="validate">
+                        <label asp-for="Email"></label>
+                        <span asp-validation-for="Email"></span>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">event_note</i>
+                        <input asp-for="OpeningHoursFrom" type="text" class="timepicker">
+                        <label asp-for="OpeningHoursFrom"></label>
+                        <span asp-validation-for="OpeningHoursFrom"></span>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">event_note</i>
+                        <input asp-for="OpeningHoursTo" type="text" class="timepicker">
+                        <label asp-for="OpeningHoursTo"></label>
+                        <span asp-validation-for="OpeningHoursTo"></span>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">medical_information</i>
+                        <select name="SpecialityId" asp-items="ViewBag.ListSpecialities">
+                            <option value="" disabled selected>Choose your option</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6 m6">
+                        <button class="btn waves-effect waves-light green accent-3" type="submit" name="action">
+                            create
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                    <div class="col s6 m6">
+                        <a asp-action="Index" class="waves-effect waves-light btn indigo darken-3"><i class="material-icons left">undo</i>return</a>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 </body>
 </html>
