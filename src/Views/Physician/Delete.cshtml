@@ -1,5 +1,9 @@
 @model TurnsBackFront.Models.Physician
 
+@{
+    ViewData["Title"] = "Deleting " + Model.Name + " " + Model.Surname + " Physician";
+}
+
 <!DOCTYPE html>
 
 <html>
@@ -8,7 +12,7 @@
     <title>Delete</title>
 </head>
 <body>
-    <h4>Are you sure you want to delete physician?</h4>
+    <h4>Are you sure you want to delete the following physician?</h4>
     <div>
         <h5>Physician</h5>
         <hr />
