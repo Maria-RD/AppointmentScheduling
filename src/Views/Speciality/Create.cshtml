@@ -1,20 +1,44 @@
 ﻿@model TurnsBackFront.Models.Speciality
 
-<h4>Speciality</h4>
+@{
+    ViewData["Title"] = "Creating a new Speciality";
+}
 
-<div>
-    <form asp-action="Create">
-        <div asp-validation-summary="ModelOnly"></div>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    <h5>Speciality</h5>
+    <hr />
+    <div class="row">
         <div>
-            <label asp-for="Description"></label>
-            <input asp-for="Description"/>
-            <span asp-validation-for="Description"></span>
+            <form class="col-s12" asp-action="Edit">
+                <div asp-validation-summary="ModelOnly"></div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">subject</i>
+                        <input asp-for="Description" type="text" class="validate">
+                        <label asp-for="Description"></label>
+                        <span asp-validation-for="Description"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6 m6">
+                        <button class="btn waves-effect waves-light green accent-3" type="submit" name="action">
+                            save
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                    <div class="col s6 m6">
+                        <a asp-action="Index" class="waves-effect waves-light btn indigo darken-3"><i class="material-icons left">undo</i>return</a>
+                    </div>
+                </div>
+            </form>
         </div>
-        <div>
-            <input type="submit" value="Save" />
-        </div>
-    </form>
-</div>
-<div>
-    <a asp-action="Index">Return</a>
-</div>
+    </div>
+</body>
+</html>
