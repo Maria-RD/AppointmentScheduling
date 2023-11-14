@@ -1,5 +1,9 @@
 @model TurnsBackFront.Models.Physician
 
+@{
+    ViewData["Title"] = "Details of " + Model.Name + " " + Model.Surname + " Physician";
+}
+
 <!DOCTYPE html>
 
 <html>
@@ -8,64 +12,44 @@
     <title>Details</title>
 </head>
 <body>
-
-<div>
-    <h4>Physician</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Surname)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Surname)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Address)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Phone)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Phone)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.OpeningHoursFrom)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.OpeningHoursFrom)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.OpeningHoursTo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.OpeningHoursTo)
-        </dd>
-        <dt class= "col-sm-2">
-            @Html.DisplayNameFor(model => model.PhysicianSpeciality[0].Speciality)
-        </dt>
-        <dd class= "col-sm-10">
-            @Html.DisplayFor(model => model.PhysicianSpeciality[0].Speciality.Description)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.PhysicianId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+    <div>
+        <h5>Physician</h5>
+        <hr />
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card hoverable indigo lighten-4">
+                    <div class="card-content">
+                        <span class="card-title"><h5><b>@Html.DisplayFor(model => model.Name) @Html.DisplayFor(model => model.Surname)</b></h5></span>
+                        <dt>
+                            <h6><b>@Html.DisplayNameFor(model => model.Address):</b> @Html.DisplayFor(model => model.Address)</h6>
+                        </dt>
+                        <hr />
+                        <dt>
+                            <h6><b>@Html.DisplayNameFor(model => model.Phone):</b> @Html.DisplayFor(model => model.Phone)</h6>
+                        </dt>
+                        <hr />
+                        <dt>
+                            <h6><b>@Html.DisplayNameFor(model => model.Email):</b> @Html.DisplayFor(model => model.Email)</h6>
+                        </dt>
+                        <hr />
+                        <dt>
+                            <h6><b>@Html.DisplayNameFor(model => model.OpeningHoursFrom):</b> @Html.DisplayFor(model => model.OpeningHoursFrom)</h6>
+                        </dt>
+                        <hr />
+                        <dt>
+                            <h6><b>@Html.DisplayNameFor(model => model.OpeningHoursTo):</b> @Html.DisplayFor(model => model.OpeningHoursTo)</h6>
+                        </dt>
+                    </div>
+                    <div class="card-action indigo darken-4">
+                        <form asp-action="Delete">
+                            <input type="hidden" asp-for="PhysicianId" />
+                            <a asp-action="Edit" asp-route-id="@Model.PhysicianId" class="waves-light btn-small green cccent-3">Edit</a>
+                            <a asp-action="Index" class="right green-text text-accent-3">Return</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

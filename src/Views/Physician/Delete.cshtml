@@ -1,5 +1,9 @@
 @model TurnsBackFront.Models.Physician
 
+@{
+    ViewData["Title"] = "Deleting " + Model.Name + " " + Model.Surname + " Physician";
+}
+
 <!DOCTYPE html>
 
 <html>
@@ -8,61 +12,45 @@
     <title>Delete</title>
 </head>
 <body>
-
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Physician</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Surname)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Surname)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Address)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Phone)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Phone)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.OpeningHoursFrom)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.OpeningHoursFrom)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.OpeningHoursTo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.OpeningHoursTo)
-        </dd>
-    </dl>
-    
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="PhysicianId" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
-    </form>
-</div>
+    <h4>Are you sure you want to delete the following physician?</h4>
+    <div>
+        <h5>Physician</h5>
+        <hr />
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card hoverable indigo lighten-4">
+                    <div class="card-content">
+                        <span class="card-title"><h5><b>@Html.DisplayFor(model => model.Name) @Html.DisplayFor(model => model.Surname)</b></h5></span>
+                        <dt>
+                            <h6><b>@Html.DisplayNameFor(model => model.Address):</b> @Html.DisplayFor(model => model.Address)</h6>
+                        </dt>
+                        <hr />
+                        <dt>
+                            <h6><b>@Html.DisplayNameFor(model => model.Phone):</b> @Html.DisplayFor(model => model.Phone)</h6>
+                        </dt>
+                        <hr />
+                        <dt>
+                            <h6><b>@Html.DisplayNameFor(model => model.Email):</b> @Html.DisplayFor(model => model.Email)</h6>
+                        </dt>
+                        <hr />
+                        <dt>
+                            <h6><b>@Html.DisplayNameFor(model => model.OpeningHoursFrom):</b> @Html.DisplayFor(model => model.OpeningHoursFrom)</h6>
+                        </dt>
+                        <hr />
+                        <dt>
+                            <h6><b>@Html.DisplayNameFor(model => model.OpeningHoursTo):</b> @Html.DisplayFor(model => model.OpeningHoursTo)</h6>
+                        </dt>
+                    </div>
+                    <div class="card-action indigo darken-4">
+                        <form asp-action="Delete">
+                            <input type="hidden" asp-for="PhysicianId" />
+                            <input type="submit" value="Delete" class="waves-light btn-small red white-text" />
+                            <a asp-action="Index" class="right green-text text-accent-3">Return</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

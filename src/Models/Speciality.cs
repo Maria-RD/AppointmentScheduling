@@ -8,6 +8,9 @@ namespace TurnsBackFront.Models
         [Key]
 
         public int SpecialityId { get; set; }
+        [StringLength(200)]
+        [Required (ErrorMessage = "You must enter a description")]
+        [Display (Name = "Description", Prompt = "Enter a description")]
         public string Description { get; set; }
 
         public List<PhysicianSpeciality> PhysicianSpeciality { get; set; }
