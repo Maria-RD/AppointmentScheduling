@@ -52,7 +52,7 @@ Server type: Database Engine
 Server name: .\
 Authentication: Windows Authentication
 ~~~
-7. Connect to the TurnsDB database. Use the [DataPopulation.sql](https://github.com/Maria-RD/AppointmentScheduling/blob/master/documentation/DataPopulation/DataPopulation.sql) script to populate the tables.
+7. Connect to the TurnsDB database. Use the [DataPopulation.sql](https://github.com/Maria-RD/AppointmentScheduling/blob/master/documentation/DataPopulation/DataPopulation.sql) script to create the DB and tables, and to populate them.
 8. Run the project. 
 ~~~
 dotnet watch run
