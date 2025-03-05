@@ -4,14 +4,14 @@
 [![GitHub stars](https://img.shields.io/github/stars/maria-rd/AppointmentScheduling.svg?style=social)](https://github.com/maria-rd/AppointmentScheduling/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/maria-rd/AppointmentScheduling?style=social)](https://github.com/maria-rd/AppointmentScheduling/network)
 
-This is a ASP.NET Core 7.0 C# MVC webapp, formerly in 3.1. ✈️
+This is a ASP.NET Core 9.0 C# MVC webapp, formerly in 3.1. ✈️
 
 ## Features 🎉
 
 Coming soon!
 
 ## Technologies 💻
-* .NET Core 7.0 MVC
+* .NET Core 9.0 MVC
 * Entity Framework
 * MaterializeCSS
 * HTML5
