@@ -36,7 +36,7 @@ cd AppointmentScheduling/src
 ~~~
 3. Install the EF Core command-line tools.
 ~~~
-dotnet tool install --global dotnet-ef --version 7.0.9
+dotnet tool install --global dotnet-ef --version 9.0
 ~~~
 4. Create a new EF Migrations file.
 ~~~
@@ -52,7 +52,7 @@ Server type: Database Engine
 Server name: .\
 Authentication: Windows Authentication
 ~~~
-7. Connect to the TurnsDB database. Use the [DataPopulation.sql](https://github.com/Maria-RD/AppointmentScheduling/blob/master/documentation/DataPopulation/DataPopulation.sql) script to create the DB and tables, and to populate them.
+7. Connect to the TurnsDB database. Use the [DataPopulation.sql](https://github.com/Maria-RD/AppointmentScheduling/blob/master/documentation/DataPopulation/DataPopulation.sql) script to populate the tables.
 8. Run the project. 
 ~~~
 dotnet watch run
