@@ -46,14 +46,21 @@ dotnet ef migrations add Migrations
 ~~~
 dotnet ef database update
 ~~~
-6. Go to SQL Server Management Studio. Login as follows.
+6. Troubleshooting. If you get the error:  **"The name 'Migrations' is used by an existing migration"** when running:  
+~~~
+dotnet ef database update
+~~~
+>6.1. Delete the Migrations, bin, and obj folders in AppointmentScheduling/src.\
+>6.2. Rebuild the project.\
+>6.3. Run 4. and 5. commands.
+7. Go to SQL Server Management Studio. Login as follows.
 ~~~
 Server type: Database Engine
 Server name: .\
 Authentication: Windows Authentication
 ~~~
-7. Connect to the TurnsDB database. Use the [DataPopulation.sql](https://github.com/Maria-RD/AppointmentScheduling/blob/master/documentation/DataPopulation/DataPopulation.sql) script to populate the tables.
-8. Run the project. 
+8. Connect to the TurnsDB database. Use the [DataPopulation.sql](https://github.com/Maria-RD/AppointmentScheduling/blob/master/documentation/DataPopulation/DataPopulation.sql) script to populate the tables.
+9. Run the project. 
 ~~~
 dotnet watch run
 ~~~
