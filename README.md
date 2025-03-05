@@ -19,7 +19,7 @@ Coming soon!
 
 ## Requirements 🛠
 
-* .NET Core 7.0 SDK ([install!](https://dotnet.microsoft.com/en-us/download/dotnet/7.0))
+* .NET Core 9.0 SDK ([install!](https://dotnet.microsoft.com/en-us/download/dotnet/9.0))
 * Visual Studio 2022 (Community Edition) ([install!](https://visualstudio.microsoft.com/vs/)) or Visual Studio Code ([install!](https://code.visualstudio.com/download))
 * SQL Server 2019 (Developer Edition) ([install!](https://go.microsoft.com/fwlink/?linkid=866662))
 * SQL Server Management Studio (SSMS) 19 ([install!](https://aka.ms/ssmsfullsetup)) 
